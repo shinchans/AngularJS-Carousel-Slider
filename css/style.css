@@ -1,0 +1,138 @@
+﻿/*
+Description: Stylesheet for Simple AngularJS Carousel Slider
+Author: Babajide Adegbenro
+Author URI: https://github.com/shinchans
+Version: 1.0
+License: GPL-3.0+
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    height: 64px;
+    margin-top: -35px;
+    outline: medium none;
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    z-index: 5;
+}
+
+.arrow.prev {
+    background-image: url("../images/prev.png");
+    left: 20px;
+    opacity: 0.2;
+    transition: all 0.2s linear 0s;
+}
+
+.arrow.next {
+    background-image: url("../images/next.png");
+    opacity: 0.2;
+    right: 20px;
+    transition: all 0.2s linear 0s;
+}
+
+.arrow.prev:hover {
+    opacity: 1;
+}
+
+.arrow.next:hover {
+    opacity: 1;
+}
+
+.nav {
+    bottom: 0px;
+    display: block;
+    height: 64px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+
+.nav li {
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    height: 48px;
+    margin: 0 2px;
+    position: relative;
+    width: 64px;
+}
+
+.nav li.active {
+    border: 2px solid #FFFFFF;
+}
+
+.nav li img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    background-color: #000;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.slide.ng-hide-add {
+    opacity: 1;
+
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.slide.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+}
+
+.slide.ng-hide-remove {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+
+    display: block !important;
+    opacity: 0;
+}
+
+.slide, .slide.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+}
